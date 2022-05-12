@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Open+Sans:ital,wght@0,400;0,500;0,700;1,500;1,700;1,800&family=Work+Sans:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;700&display=swap');
+
+:root{
+    --big-font-size: 2rem ;
+    --h1-font-size: 1.5rem ;
+    --h2-font-size: 1.25rem ;
+    --h3-font-size: 1.125rem ;
+    --normal-font-size: .938rem ;
+    --small-font-size: .813rem ;
+    --smaller-font-size: .75rem ;
+
+    --font-medium: 500 ;
+    --font-semi-bold: 600 ;
+
+    --mb-0-25: .25rem ;
+    --mb-0-5: .5rem ;
+    --mb-0-75: .75rem ;
+    --mb-1: 1rem ;
+    --mb-1-5: 1.5rem ;
+    --mb-2: 2rem ;
+    --mb-2-5: 2.5rem ;
+    --mb-3: 3rem ;
+
+
+    --body-font:'Montserrat';
+    --text-font:'Work Sans'
+    --big-font-size: 2rem ;
+    --h1-font-size: 1.5rem ;
+    --h2-font-size: 1.25rem ;
+    --h3-font-size: 1.125rem ;
+    --normal-font-size: .938rem ;
+    --small-font-size: .813rem ;
+    --smaller-font-size: .75rem ;
+
+    --font-medium: 500 ;
+    --font-semi-bold: 600 ;
+
+    --mb-0-25: .25rem ;
+    --mb-0-5: .5rem ;
+    --mb-0-75: .75rem ;
+    --mb-1: 1rem ;
+    --mb-1-5: 1.5rem ;
+    --mb-2: 2rem ;
+    --mb-2-5: 2.5rem ;
+    --mb-3: 3rem ;
+
+    --primary-color: #0DD3FF;
+    --secondary-color: #042347;
+    --background-color: #dbdbdb;
+    --text-color: black;
+}
+
+
+
+@media screen and (min-width: 968px){
+    :root{
+    --big-font-size: 3rem ;
+    --h1-font-size: 2.25rem ;
+    --h2-font-size: 1.5rem ;
+    --h3-font-size: 1.25rem ;
+    --normal-font-size: 1rem ;
+    --small-font-size: .875rem ;
+    --smaller-font-size: .813rem ;
+    }
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0 0 var(--header-height) 0;
+    background-color: var(--background-color);
+}
+
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+.container{
+    max-width: 768px;
+    margin-left: var(--mb-1-5);
+    margin-right: var(--mb-1-5);
+}
+
+.grid{
+    display: grid;
+    gap: 1.5rem;
+}
+
+
+.header{
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 5;
+    background-color: #DBDBDB;
+}
+
+.nav{
+    max-width: 968px;
+    height: var(--header-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+.nav__logo,
+.nav_toggle{
+    color: var(--title-color);
+    font-weight: var(--font-semi-bold);
+}
+
+.nav__logo:hover{
+    color: var(--first-color);
+}
+
+.nav__toggle{
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+.nav__toggle:hover{
+    color: var(--first-color);
+}
+
+@media screen and (max-width: 767px){
+    .nav__menu{
+        position: fixed ;
+        bottom: -100%;
+        left: 0;
+        width: 100%;
+        background-color: #DBDBDB;
+        padding: 2rem 1.5rem 3rem 0;
+        box-shadow: 0 -1px 4px rgba(0, 0, 0, .15);
+        border-radius: 1.5rem 1.5rem 0 0;
+        transition: .3s;
+    }
+    .nav__logo{
+        font-size: var(--big-font-size);
+        font-style: italic;
+    }
+}
+
+
+@media screen and (max-width: 350px){
+
+    .nav__menu{
+        padding: 2rem .25rem 4rem;
+    }
+    .nav__list{
+        column-gap: 0;
+    }
+}
+
+.nav__list{
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.nav__link{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: var(--font-medium);
+    color: var(--title-color);
+    font-weight: var(--font-medium);
+}
+.nav__link:hover{
+    color: rgb(0, 195, 255);
+}
+.nav__icon{
+    font-size: 1.2rem;
+}
+
+.nav__close{
+    position: absolute;
+    right: 1.3rem;
+    bottom: .5rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--first-color);
+}
+.nav__close:hover{
+    color: var(--first-color-alt);
+}
+
+.show-menu{
+    bottom: 0;
+}
+
+.active-link{
+    color: rgb(0, 195, 255);
+}
+.scroll-header{
+    box-shadow: 0 -1px 4px rgba(0, 0, 0, .15);
+}
